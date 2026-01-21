@@ -32,18 +32,16 @@ let worker: Worker | null = null
 function handleWorkerMessage (event: MessageEvent<IWorkerOutboundMessage>): void {
   const { type, payload } = event.data
 
-  if (type !== EWorkerMessageType.UPDATES) {
-    return
-  }
+  if (type !== EWorkerMessageType.UPDATES) return
 
   for (const update of payload) {
     contactsStore.patchRow(update)
   }
 }
 
-function initWorker (): void {
+function initWorker () {
   worker = new Worker(
-    new URL('@/workers/contacts.worker.ts', import.meta.url),
+    new URL('./workers/contacts.worker.ts', import.meta.url),
     { type: 'module' }
   )
 
@@ -51,10 +49,8 @@ function initWorker (): void {
   worker.postMessage({ type: EWorkerMessageType.START })
 }
 
-function cleanupWorker (): void {
-  if (worker === null) {
-    return
-  }
+function cleanupWorker () {
+  if (!worker) return
 
   worker.postMessage({ type: EWorkerMessageType.STOP })
   worker.terminate()
@@ -63,6 +59,7 @@ function cleanupWorker (): void {
 
 onBeforeMount(() => {
   contactsStore.initialFetch()
+
   initWorker()
 })
 

@@ -5,16 +5,23 @@ import type { IContactUpdate, IWorkerInboundMessage, IWorkerOutboundMessage } fr
 const BATCH_INTERVAL_MS = 500
 const BATCH_SIZE = 100
 
-const updateQueue: IContactUpdate[] = []
+const updatesMap = new Map<string, IContactUpdate>()
 let batchIntervalId: ReturnType<typeof setInterval> | null = null
 
-function processBatch (): void {
-  if (updateQueue.length === 0) {
-    return
-  }
+function getUpdateKey (update: IContactUpdate): string {
+  return `${update.rowId}:${update.colId}`
+}
 
-  const batchCount = Math.min(updateQueue.length, BATCH_SIZE)
-  const batch = updateQueue.splice(0, batchCount)
+function processBatch () {
+  if (!updatesMap.size) return
+
+  const allUpdates = Array.from(updatesMap.values())
+
+  const batch = allUpdates.slice(0, BATCH_SIZE)
+
+  for (const update of batch) {
+    updatesMap.delete(getUpdateKey(update))
+  }
 
   const message: IWorkerOutboundMessage = {
     type: EWorkerMessageType.UPDATES,
@@ -24,35 +31,37 @@ function processBatch (): void {
   self.postMessage(message)
 }
 
-function startListening (): void {
-  if (batchIntervalId !== null) {
-    return
-  }
+function startListening () {
+  if (batchIntervalId) return
 
   contactsUpdatesService.listenUpdates((update) => {
-    updateQueue.push(update)
+    updatesMap.set(getUpdateKey(update), update)
   })
 
   batchIntervalId = setInterval(processBatch, BATCH_INTERVAL_MS)
 }
 
-function stopListening (): void {
+function stopListening () {
   contactsUpdatesService.stopListening()
 
-  if (batchIntervalId !== null) {
+  if (batchIntervalId) {
     clearInterval(batchIntervalId)
+
     batchIntervalId = null
   }
 
-  updateQueue.length = 0
+  updatesMap.clear()
 }
 
-self.onmessage = (event: MessageEvent<IWorkerInboundMessage>): void => {
+self.onmessage = (event: MessageEvent<IWorkerInboundMessage>) => {
   const { type } = event.data
 
-  if (type === EWorkerMessageType.START) {
-    startListening()
-  } else if (type === EWorkerMessageType.STOP) {
-    stopListening()
+  switch (type) {
+    case EWorkerMessageType.START:
+      startListening()
+      break
+    case EWorkerMessageType.STOP:
+      stopListening()
+      break
   }
 }

@@ -5,10 +5,10 @@ export interface IContactUpdate {
 }
 
 export interface IWorkerInboundMessage {
-  type: import('./contacts.worker.enums').EWorkerMessageType.START | import('./contacts.worker.enums').EWorkerMessageType.STOP
+  type: import('./contacts.worker.enums').EWorkerMessageType
 }
 
 export interface IWorkerOutboundMessage {
-  type: import('./contacts.worker.enums').EWorkerMessageType.UPDATES
+  type: import('./contacts.worker.enums').EWorkerMessageType
   payload: IContactUpdate[]
 }
