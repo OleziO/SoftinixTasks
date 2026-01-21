@@ -21,19 +21,52 @@
 </template>
 
 <script lang="ts" setup>
+import { EWorkerMessageType } from '@/views/contacts/workers/contacts.worker.enums'
+import type { IWorkerOutboundMessage } from './workers/contacts.worker.types'
+
 const contactsStore = useContactsStore()
 const { columns, rows, loading } = storeToRefs(contactsStore)
 
+let worker: Worker | null = null
+
+function handleWorkerMessage (event: MessageEvent<IWorkerOutboundMessage>): void {
+  const { type, payload } = event.data
+
+  if (type !== EWorkerMessageType.UPDATES) {
+    return
+  }
+
+  for (const update of payload) {
+    contactsStore.patchRow(update)
+  }
+}
+
+function initWorker (): void {
+  worker = new Worker(
+    new URL('@/workers/contacts.worker.ts', import.meta.url),
+    { type: 'module' }
+  )
+
+  worker.onmessage = handleWorkerMessage
+  worker.postMessage({ type: EWorkerMessageType.START })
+}
+
+function cleanupWorker (): void {
+  if (worker === null) {
+    return
+  }
+
+  worker.postMessage({ type: EWorkerMessageType.STOP })
+  worker.terminate()
+  worker = null
+}
+
 onBeforeMount(() => {
   contactsStore.initialFetch()
-
-  // Uncomment this to see updates in the table
-  // contactsUpdatesService.listenUpdates((update) => {
-  //   contactsStore.patchRow(update)
-  // })
+  initWorker()
 })
 
 onBeforeUnmount(() => {
-  contactsUpdatesService.stopListening()
+  cleanupWorker()
 })
 </script>
