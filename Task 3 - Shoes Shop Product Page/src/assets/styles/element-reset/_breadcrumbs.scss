@@ -1,0 +1,18 @@
+
+
+@use "element-plus/theme-chalk/src/breadcrumb";
+@use "element-plus/theme-chalk/src/breadcrumb-item";
+
+.el-breadcrumb {
+  &__item {
+    .el-breadcrumb__inner a {
+      @apply text-disabled-text font-normal underline text-sm;
+    }
+
+    &:last-child {
+      .el-breadcrumb__inner a {
+        @apply font-semibold text-primary no-underline;
+      }
+    }
+  }
+}

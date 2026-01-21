@@ -1,0 +1,9 @@
+
+@use "element-plus/theme-chalk/src/carousel";
+@use "element-plus/theme-chalk/src/carousel-item";
+
+.el-carousel {
+  &__container {
+    @apply size-full;
+  }
+}

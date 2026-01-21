@@ -1,0 +1,9 @@
+@use "element-plus/theme-chalk/src/image";
+
+.el-image {
+  @apply bg-none;
+
+  img {
+    @apply size-full;
+  }
+}

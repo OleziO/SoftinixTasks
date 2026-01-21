@@ -1,0 +1,13 @@
+@use "element-plus/theme-chalk/src/dialog";
+
+.el-dialog {
+  @apply rounded-md p-24 flex flex-col m-0;
+
+  &__body {
+    @apply overflow-auto flex-1 max-h-[85vh] md:max-h-[90vh];
+  }
+}
+
+.el-overlay-dialog {
+  @apply md:px-74 flex items-center max-h-full justify-center overflow-hidden;
+}

@@ -1,0 +1,39 @@
+@use "element-plus/theme-chalk/src/button";
+
+.el-button {
+  --el-fill-color-blank: theme(colors.transparent);
+
+  @apply text-dark-800 py-10 px-16 flex items-center justify-center gap-8 font-bold text-md h-fit rounded-md;
+
+  &.is-plain {
+    @apply hover:bg-transparent-blue;
+  }
+
+  &--default.is-plain {
+    @apply border-dark-800;
+  }
+
+  &--primary.is-plain {
+    border-color: var(--el-color-primary);
+    color: var(--el-color-primary);
+    background-color: transparent;
+  
+    svg, svg path {
+      fill: var(--el-color-primary);
+    }
+  }  
+
+  &--success:hover {
+    background: var(--app-color-accent-hover);
+
+    @apply text-dark-900;
+  }
+
+  &.is-link {
+    @apply p-0 font-normal;
+  }
+
+  & + .el-button {
+    @apply m-0;
+  }
+}

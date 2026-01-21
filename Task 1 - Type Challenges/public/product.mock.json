@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "name": "ASICS GEL-KAYANO 14",
+    "price": 155,
+    "description": "The GEL-KAYANO 14 sneaker resurfaces with its late 2000s aesthetic as a nod to our storied GEL-KAYANO series. Reinterpreting the shoe's performance capabilities with updated materials and componentry, this version became the first iteration in the sneaker's lineage to be designed by someone other than Toshikazu Kayano. Inspired by the original tooling from 2008, this shoe also features GEL technology underfoot for advanced impact absorption.",
+    "details": {
+      "brand": "ASICS",
+      "model": "GEL-KAYANO 14",
+      "type": "Running Shoe",
+      "cushioning": "GEL technology",
+      "weight": "11.5 oz (men’s size 9)"
+    },
+    "shipping": {
+      "ASICS Official Store:": "$160",
+      "Amazon:": "$140-$160 (varies by size)",
+      "Foot Locker:": "$150",
+      "Zappos:": "$155 (Free shipping options)"
+    },
+    "colors": [
+      {
+        "id": 1,
+        "name": "White/Tai Chi Yellow",
+        "images": [
+          "https://image2url.com/r2/default/images/1768902685871-2a811ed3-6d40-49af-bc45-9d206e40a8a4.png",
+          "https://image2url.com/r2/default/images/1768902926203-7eebd5e8-e287-4055-a557-6242b46c68f7.png",
+          "https://image2url.com/r2/default/images/1768902948495-164c028a-cb1d-4be1-a8f0-e863463dbd45.png",
+          "https://image2url.com/r2/default/images/1768902973512-d7711818-f27e-4f95-b6a8-b408e01a4f86.png",
+          "https://image2url.com/r2/default/images/1768902996256-81259aa4-499c-4bef-a271-0b98c12e3da2.png",
+          "https://image2url.com/r2/default/images/1768903016390-07ce4d00-56d3-423a-afaf-9d411c9438ca.png"
+        ],
+        "sizes": [
+          { "size": 6.5, "available": true },
+          { "size": 7, "available": false },
+          { "size": 7.5, "available": true },
+          { "size": 8, "available": true },
+          { "size": 8.5, "available": false },
+          { "size": 9, "available": true },
+          { "size": 9.5, "available": true },
+          { "size": 10, "available": true },
+          { "size": 10.5, "available": false },
+          { "size": 11, "available": true },
+          { "size": 11.5, "available": true },
+          { "size": 12, "available": true },
+          { "size": 12.5, "available": false },
+          { "size": 13, "available": false },
+          { "size": 13.5, "available": false }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Blue/White",
+        "images": [
+          "https://image2url.com/r2/default/images/1768902717226-4bf0a6b9-89a9-4978-b84e-23f1a76adf3d.png",
+          "https://image2url.com/r2/default/images/1768902926203-7eebd5e8-e287-4055-a557-6242b46c68f7.png",
+          "https://image2url.com/r2/default/images/1768902948495-164c028a-cb1d-4be1-a8f0-e863463dbd45.png",
+          "https://image2url.com/r2/default/images/1768902973512-d7711818-f27e-4f95-b6a8-b408e01a4f86.png",
+          "https://image2url.com/r2/default/images/1768902996256-81259aa4-499c-4bef-a271-0b98c12e3da2.png",
+          "https://image2url.com/r2/default/images/1768903016390-07ce4d00-56d3-423a-afaf-9d411c9438ca.png"
+        ],
+        "sizes": [
+          { "size": 6.5, "available": false },
+          { "size": 7, "available": false },
+          { "size": 7.5, "available": false },
+          { "size": 8, "available": false },
+          { "size": 8.5, "available": false },
+          { "size": 9, "available": false },
+          { "size": 9.5, "available": false },
+          { "size": 10, "available": false },
+          { "size": 10.5, "available": false },
+          { "size": 11, "available": false },
+          { "size": 11.5, "available": false },
+          { "size": 12, "available": false },
+          { "size": 12.5, "available": false },
+          { "size": 13, "available": false },
+          { "size": 13.5, "available": false }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Black/Red",
+        "images": [
+          "https://image2url.com/r2/default/images/1768902733201-c8bd4f2d-c7b5-4abc-86b5-dab9b3fd4256.png",
+          "https://image2url.com/r2/default/images/1768902926203-7eebd5e8-e287-4055-a557-6242b46c68f7.png",
+          "https://image2url.com/r2/default/images/1768902948495-164c028a-cb1d-4be1-a8f0-e863463dbd45.png",
+          "https://image2url.com/r2/default/images/1768902973512-d7711818-f27e-4f95-b6a8-b408e01a4f86.png",
+          "https://image2url.com/r2/default/images/1768902996256-81259aa4-499c-4bef-a271-0b98c12e3da2.png",
+          "https://image2url.com/r2/default/images/1768903016390-07ce4d00-56d3-423a-afaf-9d411c9438ca.png"
+        ],
+        "sizes": [
+          { "size": 6.5, "available": true },
+          { "size": 7, "available": true },
+          { "size": 7.5, "available": true },
+          { "size": 8, "available": false },
+          { "size": 8.5, "available": true },
+          { "size": 9, "available": true },
+          { "size": 9.5, "available": true },
+          { "size": 10, "available": false },
+          { "size": 10.5, "available": true },
+          { "size": 11, "available": true },
+          { "size": 11.5, "available": false },
+          { "size": 12, "available": true },
+          { "size": 12.5, "available": true },
+          { "size": 13, "available": true },
+          { "size": 13.5, "available": false }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Gray/Orange",
+        "images": [
+          "https://image2url.com/r2/default/images/1768902753154-8868fd12-c932-49c2-b2b5-56b300729fff.png",
+          "https://image2url.com/r2/default/images/1768902926203-7eebd5e8-e287-4055-a557-6242b46c68f7.png",
+          "https://image2url.com/r2/default/images/1768902948495-164c028a-cb1d-4be1-a8f0-e863463dbd45.png",
+          "https://image2url.com/r2/default/images/1768902973512-d7711818-f27e-4f95-b6a8-b408e01a4f86.png",
+          "https://image2url.com/r2/default/images/1768902996256-81259aa4-499c-4bef-a271-0b98c12e3da2.png",
+          "https://image2url.com/r2/default/images/1768903016390-07ce4d00-56d3-423a-afaf-9d411c9438ca.png"
+        ],
+        "sizes": [
+          { "size": 6.5, "available": true },
+          { "size": 7, "available": false },
+          { "size": 7.5, "available": true },
+          { "size": 8, "available": true },
+          { "size": 8.5, "available": true },
+          { "size": 9, "available": false },
+          { "size": 9.5, "available": true },
+          { "size": 10, "available": true },
+          { "size": 10.5, "available": true },
+          { "size": 11, "available": true },
+          { "size": 11.5, "available": false },
+          { "size": 12, "available": true },
+          { "size": 12.5, "available": true },
+          { "size": 13, "available": true },
+          { "size": 13.5, "available": true }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Green/Black",
+        "images": [
+          "https://image2url.com/r2/default/images/1768902777503-a36e0694-1894-48de-948e-d24172e6c282.png",
+          "https://image2url.com/r2/default/images/1768902926203-7eebd5e8-e287-4055-a557-6242b46c68f7.png",
+          "https://image2url.com/r2/default/images/1768902948495-164c028a-cb1d-4be1-a8f0-e863463dbd45.png",
+          "https://image2url.com/r2/default/images/1768902973512-d7711818-f27e-4f95-b6a8-b408e01a4f86.png",
+          "https://image2url.com/r2/default/images/1768902996256-81259aa4-499c-4bef-a271-0b98c12e3da2.png",
+          "https://image2url.com/r2/default/images/1768903016390-07ce4d00-56d3-423a-afaf-9d411c9438ca.png"
+        ],
+        "sizes": [
+          { "size": 6.5, "available": false },
+          { "size": 7, "available": false },
+          { "size": 7.5, "available": false },
+          { "size": 8, "available": false },
+          { "size": 8.5, "available": false },
+          { "size": 9, "available": false },
+          { "size": 9.5, "available": false },
+          { "size": 10, "available": false },
+          { "size": 10.5, "available": false },
+          { "size": 11, "available": false },
+          { "size": 11.5, "available": false },
+          { "size": 12, "available": false },
+          { "size": 12.5, "available": false },
+          { "size": 13, "available": false },
+          { "size": 13.5, "available": false }
+        ]
+      }
+    ]
+  }
+]

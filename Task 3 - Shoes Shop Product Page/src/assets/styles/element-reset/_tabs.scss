@@ -1,0 +1,21 @@
+@use "element-plus/theme-chalk/src/tabs";
+
+.el-tabs {
+  &__header.is-top {
+    @apply mb-8;
+  }
+
+  &__item.is-top {
+    @apply px-8 text-sm flex h-fit;
+
+    &.is-active {
+      @apply font-semibold;
+    }
+  }
+
+  &__active-bar,
+  &__nav-wrap::after {
+    @apply hidden;
+  }
+}
+

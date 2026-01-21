@@ -1,0 +1,79 @@
+:root {
+  --app-color-secondary: #C5C7CA40;
+  --app-color-dark: #191D22;
+  --app-color-dark-800: #21262C;
+  --app-color-dark-900: #191D22;
+  --app-color-disabled: #C5C7CA33;
+  --app-color-disabled-text: #93989C;
+  --app-color-blue: #34739D;
+  --app-color-transparent-blue: #F0F6FA;
+  --app-color-grey: #F4F8FB80;
+  --app-color-dark-grey: #51585F;
+  --app-color-accent-hover: #FFFAA3;
+  --app-color-white-100: #C6D8E4;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  
+  @apply box-border;
+}
+
+html,
+body,
+#app {
+  @apply h-full;
+}
+
+
+body {
+  @apply text-md font-inter font-normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  h1 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
+  }
+
+  h4 {
+    @apply text-md font-bold;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ol, ul {
+    @apply text-dark-800;
+  }
+
+  p, ol, ul, span {
+    @apply text-sm;
+  }
+}
+
+img, svg {
+  display: initial;
+}
+
+label {
+  @apply block text-sm font-semibold text-gray-600;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 2px solid #fff;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+

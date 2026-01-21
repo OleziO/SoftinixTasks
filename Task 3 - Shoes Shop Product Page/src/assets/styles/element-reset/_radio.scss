@@ -1,0 +1,34 @@
+@use "element-plus/theme-chalk/src/radio";
+@use "element-plus/theme-chalk/src/radio-button";
+
+.el-radio-button {
+  --el-radio-button-checked-bg-color: var(--app-color-transparent-blue);
+  --el-radio-button-checked-text-color: #000;
+  --el-disabled-text-color: var(--app-color-disabled-text);
+
+  @apply h-40 overflow-hidden rounded-lg border border-dark-800 text-dark-800;
+
+  &:first-child &__inner,
+  &:last-child &__inner,
+  &__inner {
+    @apply w-full h-full flex justify-center items-center cursor-pointer;
+  }
+
+  &__inner {
+    &:hover {
+      @apply bg-secondary text-dark-800;
+    }
+  }
+
+  &.is-active {
+    @apply border-primary border-[1.5px] font-medium;
+  }
+
+  &.is-disabled {
+    @apply border-disabled-text;
+
+    .el-radio-button__inner {
+      @apply line-through cursor-not-allowed bg-secondary text-disabled-text;
+    }  
+  }
+}
