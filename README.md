@@ -48,7 +48,7 @@ npm run dev
 
 ---
 
-## 📊 Task 4 - Contact Table Web Worker WIP
+## 📊 Task 4 - Contact Table Web Worker
 
 📂 Папка: `Task 4 - Contact Table Web Worker`
 
