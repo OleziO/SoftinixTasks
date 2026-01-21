@@ -68,7 +68,7 @@ const mappedItems = computed(() => {
 })
 
 
-function parseValue (value: any) {
+function parseValue (value: any) { // In real project this should be in helper file without exposing from component
   const isDate =
     dayjs.isDayjs(value) ||
     (value instanceof Date && !isNaN(value.getTime())) ||
