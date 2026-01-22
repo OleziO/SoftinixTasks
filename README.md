@@ -1,68 +1,36 @@
 # 🧪 Sandbox Guides
 
-Цей репозиторій містить декілька незалежних проєктів, які можна запускати в [🔗**sandbox-середовищі**](https://codesandbox.io/p/github/OleziO/SoftinixTasks/main?import=true) для тестування та перевірки рішень.
+Цей репозиторій містить декілька незалежних проєктів, які запускаються безпосередньо у **CodeSandbox**.
 
-Нижче наведено покрокову інструкцію для кожного з них.
+Кожен таск має **власне sandbox-посилання**, де ви можете переглядати, тестувати та перевіряти рішення без локального встановлення залежностей.
 
 ---
 
 ## 🧩 Task 1 — Type Challenges
 
-📂 Папка: `Task 1 - Type Challenges`
-
-### Запуск
-
-```bash
-cd "Task 1 - Type Challenges"
-npm ci
-npm run dev
-```
+🔗 **Відкрити в Sandbox:**
+[Відкрити Sandbox →](https://codesandbox.io/p/github/OleziO/Task-1/main?import=true)
 
 ---
 
 ## ➗ Task 2 — Separator Component
 
-📂 Папка: `Task 2 - Separator Component`
-
-### Запуск
-
-```bash
-cd "Task 2 - Separator Component"
-npm ci
-npm run dev
-```
+🔗 **Відкрити в Sandbox:**
+[Відкрити Sandbox →](https://codesandbox.io/p/github/OleziO/Task-2/main?import=true)
 
 ---
 
 ## 👟 Task 3 — Shoes Shop Product Page
 
-📂 Папка: `Task 3 - Shoes Shop Product Page`
-
-### Запуск
-
-```bash
-cd "Task 3 - Shoes Shop Product Page"
-npm ci
-npm run dev
-```
+🔗 **Відкрити в Sandbox:**
+[Відкрити Sandbox →](https://codesandbox.io/p/github/OleziO/Task-3/main?import=true)
 
 ---
 
-## 📊 Task 4 - Contact Table Web Worker
+## 📊 Task 4 — Contact Table Web Worker
 
-📂 Папка: `Task 4 - Contact Table Web Worker`
+🔗 **Відкрити в Sandbox:**
+[Відкрити Sandbox →](https://codesandbox.io/p/github/OleziO/Task-4/main?import=true)
 
-### Запуск
-
-```bash
-cd "Task 4 - Contact Table Web Worker"
-npm ci
-npm run dev
-```
 
 ---
-
-
-## 📌 Примітка
-
-Кожен таск є **незалежним проєктом**, тому залежності встановлюються окремо в кожній папці.
