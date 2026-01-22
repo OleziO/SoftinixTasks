@@ -59,7 +59,7 @@ const lastIndex = computed(() => mappedItems.value.length - 1)
 
 const mappedItems = computed(() => {
   return Object.entries(props.items)
-    .filter(([label]) => props.hideElements?.includes(label))
+    .filter(([label]) => props.hideElements ? !props.hideElements?.includes(label) : true)
     .map(([label, value]) => { 
       if(props.noLabelElements?.includes(label)) return {label: '', value}
       
