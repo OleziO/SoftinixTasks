@@ -46,6 +46,8 @@ const props = withDefaults(defineProps<{
   formatDate: true,
   formatBoolean: true,
 
+  hideElements: () =>[],
+  noLabelElements: () => [],
   customArraySeparator: ', ',
   customDateFormat: 'MM-DD-YYYY',
   customBooleanFormat: () => ({
@@ -59,7 +61,7 @@ const lastIndex = computed(() => mappedItems.value.length - 1)
 
 const mappedItems = computed(() => {
   return Object.entries(props.items)
-    .filter(([label]) => props.hideElements ? !props.hideElements?.includes(label) : true)
+    .filter(([label]) => !props.hideElements?.includes(label))
     .map(([label, value]) => { 
       if(props.noLabelElements?.includes(label)) return {label: '', value}
       
